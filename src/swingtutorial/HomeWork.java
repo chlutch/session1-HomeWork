@@ -22,16 +22,14 @@ public class HomeWork {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Add Student");
         frame.setSize(960, 960);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        frame.setLayout(null);
+
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setVisible(true);
-        panel.setBounds(50, 50, 800, 800);
+        
+        panel.setBounds(50, 50, 800, 600);
 
         panel.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        
 
         JLabel lblId = new JLabel("ID: ");
         lblId.setBounds(50, 100, 50, 50);
@@ -57,8 +55,9 @@ public class HomeWork {
         lblClass.setBounds(50, 400, 50, 50);
         JTextField txtClass = new JTextField();
         txtClass.setBounds(105, 400, 100, 50);
-        JButton button = new JButton("Submit");
-                button.setBounds(80, 430, 50, 50);
+        JButton button = new JButton();
+        button.setText("Submit");
+        button.setBounds(180, 530, 100, 50);
 
         panel.add(lblId);
         panel.add(txtId);
@@ -76,6 +75,9 @@ public class HomeWork {
         panel.add(txtClass);
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setLayout(null);
     }
 
 }
